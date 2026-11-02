@@ -1,0 +1,18 @@
+# Notebooks 01-03 (tested on Google Colab, Python 3.13, November 2026).
+# Colab already provides torch, numpy, pandas, scipy, scikit-learn, statsmodels, matplotlib, openpyxl, requests and tqdm.
+torch==2.11.0
+torch_geometric==2.8.1
+numpy>=2.1
+pandas>=2.2
+scipy>=1.13
+scikit-learn>=1.5
+statsmodels>=0.14
+matplotlib>=3.9
+openpyxl>=3.1
+requests>=2.32
+tqdm>=4.66
+sentence-transformers>=3.0   # notebook 02 (MiniLM features)
+google-genai>=1.0            # notebook 03 (Gemini LLM-as-a-judge)
+
+# Notebook 00 (authors' original code, CPU) installs its own pinned versions:
+#   torch==2.6.0 (CPU index), torch-geometric, torch-scatter==2.1.2, torch-sparse==0.6.18

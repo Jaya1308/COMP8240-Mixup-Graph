@@ -1,0 +1,12 @@
+# downloaded datasets and caches (re-created by the notebooks)
+data/Planetoid/
+data/Amazon/
+data/graphsaint/
+api_cache/
+*.pt
+!data/arxiv_graph/paper_graph.pt
+__pycache__/
+.ipynb_checkpoints/
+# never commit secrets
+.env
+*.key

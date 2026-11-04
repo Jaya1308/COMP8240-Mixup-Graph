@@ -1,6 +1,0 @@
-method,5% labels,10% labels,20% labels,30% labels,60% labels
-MLP,78.2,80.1,81.5,83.0,83.8
-GCN,77.3,80.3,81.7,82.5,82.8
-Mixup+GCN,77.3,80.2,81.8,82.3,82.7
-GraphConv,79.4,82.0,83.3,84.5,85.5
-Mixup+GraphConv a4,79.3,81.9,83.3,84.3,85.3

@@ -1,5 +1,0 @@
-Gemini verdict (%),Model mistakes (n=86),Control: random wrong label (n=40)
-arXiv label fits better,33.7,92.5
-model/decoy label fits better,37.2,0.0
-both fit,24.4,7.5
-neither fits,4.7,0.0

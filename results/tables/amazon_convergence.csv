@@ -1,0 +1,9 @@
+dataset,method,acc ≤300 ep,acc ≤1000 ep,mean best epoch,runs best after 300
+Computers,GCN,85.61,90.89,962.9,10/10
+Computers,GraphConv,88.02,89.96,646.6,10/10
+Computers,Mixup+GCN,74.43,89.27,974.2,10/10
+Computers,Mixup+GraphConv a4,76.89,90.75,986.0,10/10
+Photo,GCN,92.35,93.94,872.7,10/10
+Photo,GraphConv,94.22,94.3,490.9,9/10
+Photo,Mixup+GCN,90.31,93.92,957.7,10/10
+Photo,Mixup+GraphConv a4,91.68,94.33,804.4,10/10

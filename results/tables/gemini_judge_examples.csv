@@ -1,0 +1,7 @@
+arxiv_id,title,label,pred,verdict,reason
+2004.05703,DarkneTZ: Towards Model Privacy at the Edge using Trusted Execution Environments,Machine learning,Security,other label,The main contribution is a security framework using TEEs to protect model privacy against membership inference attacks.
+1909.06122,FakeSpotter: A Simple yet Robust Baseline for Spotting AI-Synthesized Fake Faces,Security,Computer vision,both,It addresses a computer vision task (face detection) as a security defense against AI-synthesized misinformation.
+1704.03073,Data-efficient Deep Reinforcement Learning for Dexterous Manipulation,Machine learning,Robotics,other label,The primary application and motivation are solving complex robotic manipulation tasks like grasping and stacking.
+1505.00468,VQA: Visual Question Answering,NLP,Computer vision,both,VQA is a classic multimodal task sitting at the intersection of computer vision and natural language processing.
+2103.12857,Embracing the Disharmony in Medical Imaging: A Simple and Effective Framework for Domain Adaptation,Machine learning,Computer vision,both,Develops machine learning methods (domain adaptation) specifically for medical image analysis tasks.
+1804.07933,Is feature selection secure against training data poisoning?,Machine learning,Security,other label,Investigates security vulnerabilities (poisoning attacks) and the robustness of machine learning techniques.

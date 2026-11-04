@@ -1,0 +1,5 @@
+Dataset,Comparison,gain ≤300 ep,p (gain ≤300 ep),gain ≤1000 ep,p (gain ≤1000 ep)
+Computers,Mixup+GCN − GCN,-11.18,0.0,-1.62,0.0
+Computers,Mixup+GraphConv a4 − GraphConv,-11.13,0.0,0.79,0.0017
+Photo,Mixup+GCN − GCN,-2.05,0.0,-0.03,0.7625
+Photo,Mixup+GraphConv a4 − GraphConv,-2.54,0.0,0.03,0.827

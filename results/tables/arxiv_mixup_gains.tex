@@ -1,0 +1,18 @@
+\begin{tabular}{lllrrrllrr}
+\toprule
+Dataset & Comparison & Metric & Backbone & Mixup & Gain & 95\% CI & Mixup wins & p (paired t) & p (Wilcoxon) \\
+\midrule
+arXiv & Mixup+MLP − MLP & test & 83.850000 & 84.170000 & 0.330000 & [-0.06, +0.71] & 16/30 & 0.095400 & 0.097000 \\
+arXiv & Mixup+GCN − GCN & test & 82.870000 & 82.630000 & -0.240000 & [-0.50, +0.02] & 9/30 & 0.065900 & 0.043400 \\
+arXiv & Mixup+JKNet − JKNet & test & 83.420000 & 83.380000 & -0.040000 & [-0.31, +0.24] & 14/30 & 0.791500 & 1.000000 \\
+arXiv & Mixup+GraphConv − GraphConv & test & 85.440000 & 85.420000 & -0.020000 & [-0.40, +0.36] & 10/30 & 0.924200 & 0.656600 \\
+arXiv & Mixup+GraphConv a4 − GraphConv & test & 85.440000 & 85.280000 & -0.150000 & [-0.57, +0.27] & 10/30 & 0.459200 & 0.394500 \\
+arXiv & Mixup+GCN − DropEdge+GCN & test & 83.020000 & 82.630000 & -0.390000 & [-0.69, -0.09] & 8/30 & 0.012200 & 0.013600 \\
+arXiv & Mixup+MLP − MLP & f1\_macro & 78.160000 & 79.970000 & 1.810000 & [+1.16, +2.46] & 26/30 & 0.000000 & 0.000000 \\
+arXiv & Mixup+GCN − GCN & f1\_macro & 78.650000 & 78.120000 & -0.540000 & [-0.99, -0.08] & 11/30 & 0.023100 & 0.034500 \\
+arXiv & Mixup+JKNet − JKNet & f1\_macro & 79.290000 & 79.580000 & 0.290000 & [-0.23, +0.81] & 19/30 & 0.259400 & 0.177200 \\
+arXiv & Mixup+GraphConv − GraphConv & f1\_macro & 81.270000 & 81.670000 & 0.400000 & [-0.29, +1.09] & 15/30 & 0.249700 & 0.393100 \\
+arXiv & Mixup+GraphConv a4 − GraphConv & f1\_macro & 81.270000 & 81.640000 & 0.370000 & [-0.39, +1.14] & 15/30 & 0.327900 & 0.887200 \\
+arXiv & Mixup+GCN − DropEdge+GCN & f1\_macro & 78.710000 & 78.120000 & -0.600000 & [-1.18, -0.02] & 9/30 & 0.044200 & 0.040500 \\
+\bottomrule
+\end{tabular}

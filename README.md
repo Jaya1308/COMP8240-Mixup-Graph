@@ -16,10 +16,12 @@ All experiments run in Google Colab. Every notebook can be read on GitHub with i
 |---|---|
 | Does the authors' released code reproduce a Mixup gain? | Yes, in its own configuration (GraphConv, α = 4, 3 layers, 1 split × 5 seeds): Cora +1.51, Pubmed +0.52, Citeseer +0.33 points |
 | Does the gain hold in the setting the paper describes (GCN/JKNet, α = 1, 10 random 60/20/20 splits × 3 seeds)? | Not consistently: Citeseer −0.13, Cora +0.11, Pubmed −0.08 (1,710 runs). Baselines are broadly comparable to the paper |
-| Does it transfer to new data? | No. Amazon: Computers −3.46, Photo −0.66. arXiv graph: no backbone improves (all 95% CIs include 0); Mixup+GCN is slightly worse (macro-F1 −0.54, p = 0.02) |
-| What explains the arXiv result? | Text features are strong (a feature-only MLP beats GCN and GAT). Homophily is moderate (0.636 vs 0.81 for Cora). Errors concentrate on papers with mixed-area neighbourhoods and on cross-listed papers |
-
-<!-- TODO after the final run: add the α × layer result (Section 8.1), the Amazon convergence check (8.2), the kappa values (4.3/5.3) and the LLM-judge share (7.4). -->
+| Which difference in the released code causes the gain? (notebook 03, 8.1; 540 runs) | The **layer**, not α or the split. GraphConv + Mixup: Cora +1.11, Pubmed +0.85 (p < 0.0001, 10 splits × 3 seeds). GCN + Mixup: +0.15 to +0.49. α = 1 and α = 4 give almost the same gains |
+| Does it transfer to Amazon Computers / Photo? (8.2) | The losses in the project update (−3.46 / −0.66) were mostly under-training: Mixup peaks at epochs 800–990. With 1,000 epochs: Computers GraphConv +0.79, GCN −1.62; Photo ≈ 0 |
+| Does it transfer to the new arXiv graph? (Section 6) | No. Graph Mixup gains are −0.24 to +0.40 for every backbone and label rate (5–60%); Mixup+GCN is slightly worse (macro-F1 −0.54, p = 0.02). Only input Mixup on a feature-only MLP helps (macro-F1 +1.81, 26/30 runs), mainly on the small classes |
+| How reliable are the arXiv labels? (4.3, 5.3) | Label visible: 49/50 agree (κ 0.97). Blind: 63.5% (κ 0.52). Gemini vs arXiv: 88.2% (κ 0.85). Fleiss' κ for arXiv, me and Gemini: 0.76. Most disagreements are ML vs CV |
+| Where are the errors? (7.2–7.4) | On papers whose neighbours are in other areas (accuracy 43% vs 98%) and cross-listed papers (80.4% vs 91.9%). An LLM judge rated 62% of the best model's 86 errors as plausible labels; on a control set it never picked the wrong label |
+| What explains the arXiv result? | Text features are strong (a feature-only MLP beats GCN and GAT), and homophily is moderate (0.636 vs 0.81 for Cora), so there is little left for neighbourhood-based Mixup to add |
 
 ## Repository layout
 
@@ -27,7 +29,9 @@ All experiments run in Google Colab. Every notebook can be read on GitHub with i
 notebooks/
   00_original_code_run.ipynb       authors' mixup.py and graph_conv.py run unchanged (CPU, PyTorch 2.6)
   01_table3_reproduction.ipynb     Table 3 replication, released-code configuration, Amazon datasets
-  02_arxiv_graph_construction.ipynb  building the new arXiv citation graph (OpenAlex + arXiv API)
+  02_arxiv_graph_construction.ipynb  building the new arXiv citation graph (OpenAlex + arXiv API);
+                                   Sections 8–9 are the checked annotation round and first Mixup test
+                                   from the project update (final versions are in notebook 03)
   03_final_experiments.ipynb       annotation agreement, LLM-as-a-judge, extended tests, explanation experiments
 data/arxiv_graph/
   paper_graph.pt                   features, labels and edges, loaded by notebook 03 (about 4 MB)
@@ -42,6 +46,7 @@ results/
   figures/                         every figure in the report (PNG + PDF)
   step4_results.jsonl              one line per training run (all splits and seeds)
   llm_cache.jsonl                  every Gemini answer used in the report
+  judge_predictions.json           the saved predictions of the model whose errors were judged
 ```
 
 ## How to run
@@ -54,10 +59,10 @@ results/
 
 | Notebook | Produces | Time |
 |---|---|---|
-| 00 | Authors' code output on Pubmed, Cora and Citeseer | ~30 min (CPU, including building `torch-sparse`) |
+| 00 | Authors' code output on Pubmed, Cora and Citeseer | ~30 min (CPU, prebuilt `torch-sparse` wheels) |
 | 01 | Table 3 replication, released-code configuration, Amazon results | ~3 h on a T4 (`RUN_MODE = 'medium'`) |
 | 02 | `paper_graph.pt`, `papers.csv`, `edges.csv`, `dataset_card.json`, annotation sheet | ~15 min (API calls are cached) |
-| 03 | All tables and figures for the final report | ~2.5–3 h on a T4, plus Gemini time |
+| 03 | All tables and figures for the final report | ~3.8 h on a T4, plus Gemini time (spread over several days by the free-tier limit) |
 
 **Gemini (notebook 03 only).** Add a free Google AI Studio key to Colab Secrets as `GEMINI_API_KEY`. The key is never stored in the notebook. The free tier allows about 20 requests per model per day, and the notebook needs about 30. It caches every answer and continues when the quota runs out, so re-run it the next day to finish. Without a key, the notebook reuses the cached answers in `results/llm_cache.jsonl`.
 
@@ -74,16 +79,16 @@ results/
 | Sources | [OpenAlex](https://openalex.org) (citations, CC0) and the [arXiv API](https://info.arxiv.org/help/api/) (metadata, CC0) |
 | Collection | Snowball sample: 121 seed papers, 1 hop of references and citing papers, kept if on arXiv in one of the 6 categories |
 
-Labels were checked by hand in two rounds: 50 papers with the arXiv label visible, then 52 blind. Agreement is reported as Cohen's kappa in notebook 03, Section 4.3. Gemini was used as an independent third rater.
+Labels were checked by hand in two rounds: 50 papers with the arXiv label visible, then 52 blind. Agreement is reported as Cohen's kappa in notebook 03, Sections 4.3 and 5.3 (blind round: κ = 0.52). Gemini was used as an independent third rater (κ = 0.85 against arXiv).
 
 ## Environment
 
 | | Notebooks 01–03 | Notebook 00 |
 |---|---|---|
-| Python | 3.13 (Colab) | 3.13 (Colab) |
+| Python | 3.13 (Colab) | 3.12 (Colab CPU runtime) |
 | PyTorch | 2.11.0 + CUDA 13.0, Tesla T4 | 2.6.0 CPU |
-| PyTorch Geometric | 2.8.1 | 2.8.x with `torch-scatter` 2.1.2 / `torch-sparse` 0.6.18 |
-| LLM | `gemini-3.8-flash` (Google AI Studio, free tier, November 2026) | – |
+| PyTorch Geometric | 2.8.1 | 2.8.x with prebuilt `torch-scatter` 2.1.2 / `torch-sparse` 0.6.18 wheels |
+| LLM | `gemini-3.8-flash` (annotator) and `gemini-3-flash-preview` (judge), Google AI Studio free tier, November 2026 | – |
 
 Notebooks 01 and 03 do all graph operations in plain PyTorch, so they do not need `torch-scatter` or `torch-sparse`. `requirements.txt` lists the packages for running outside Colab.
 

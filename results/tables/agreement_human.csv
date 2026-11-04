@@ -1,0 +1,4 @@
+Rater A,Rater B,Papers,Agreement,Cohen's kappa,95% CI,Reading
+You (checked),arXiv label,50,98.0%,0.974,"[0.91, 1.00]",almost perfect
+You (blind),arXiv label,52,63.5%,0.518,"[0.34, 0.68]",moderate
+You (all),arXiv label,102,80.4%,0.74,"[0.63, 0.84]",substantial

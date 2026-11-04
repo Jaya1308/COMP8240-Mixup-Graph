@@ -1,0 +1,101 @@
+{
+  "settings": {
+    "areas": {
+      "cs.CL": "NLP",
+      "cs.CV": "Computer vision",
+      "cs.LG": "Machine learning",
+      "cs.RO": "Robotics",
+      "cs.CR": "Security",
+      "cs.IR": "Info. retrieval"
+    },
+    "years": [
+      2016,
+      2023
+    ],
+    "seed_min_cites": 50,
+    "seeds_per_area": 25,
+    "refs_per_paper": 60,
+    "citing_per_paper": 40,
+    "hops": 1,
+    "max_nodes": 4000,
+    "knn_k": 5,
+    "features": "sentence-transformers/all-MiniLM-L6-v2"
+  },
+  "collection": {
+    "seeds": 121,
+    "openalex_works": 4652,
+    "unique_arxiv": 4605,
+    "arxiv_metadata": 4605
+  },
+  "stats": [
+    {
+      "graph": "citation LCC (main)",
+      "nodes": 2813,
+      "undirected_edges": 19936,
+      "avg_degree": 14.17,
+      "isolated": 0,
+      "classes": 6,
+      "features": 384,
+      "edge_homophily": 0.636,
+      "largest_class": "35.6%",
+      "years": "2008\u20132026"
+    }
+  ],
+  "classes": [
+    {
+      "label": "Computer vision",
+      "label_code": "cs.CV",
+      "papers": 1002,
+      "seeds": 29,
+      "median_year": 2020.0,
+      "cross_listed_share": 0.46,
+      "share": "35.6%"
+    },
+    {
+      "label": "Machine learning",
+      "label_code": "cs.LG",
+      "papers": 836,
+      "seeds": 25,
+      "median_year": 2020.0,
+      "cross_listed_share": 0.84,
+      "share": "29.7%"
+    },
+    {
+      "label": "NLP",
+      "label_code": "cs.CL",
+      "papers": 531,
+      "seeds": 22,
+      "median_year": 2020.0,
+      "cross_listed_share": 0.53,
+      "share": "18.9%"
+    },
+    {
+      "label": "Security",
+      "label_code": "cs.CR",
+      "papers": 205,
+      "seeds": 7,
+      "median_year": 2020.0,
+      "cross_listed_share": 0.83,
+      "share": "7.3%"
+    },
+    {
+      "label": "Robotics",
+      "label_code": "cs.RO",
+      "papers": 154,
+      "seeds": 4,
+      "median_year": 2020.0,
+      "cross_listed_share": 0.73,
+      "share": "5.5%"
+    },
+    {
+      "label": "Info. retrieval",
+      "label_code": "cs.IR",
+      "papers": 85,
+      "seeds": 1,
+      "median_year": 2021.0,
+      "cross_listed_share": 0.69,
+      "share": "3.0%"
+    }
+  ],
+  "built": "2026-10-05 11:33"
+}

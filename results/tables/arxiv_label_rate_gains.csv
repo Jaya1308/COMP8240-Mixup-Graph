@@ -1,0 +1,16 @@
+Dataset,Comparison,Metric,Backbone,Mixup,Gain,95% CI,Mixup wins,p (paired t),p (Wilcoxon),Train labels
+arXiv,Mixup+GCN − GCN,test,77.29,77.27,-0.02,"[-0.49, +0.45]",10/20,0.9375,0.8683,5%
+arXiv,Mixup+GraphConv a4 − GraphConv,test,79.37,79.26,-0.11,"[-0.88, +0.67]",10/20,0.7764,0.6724,5%
+arXiv,GCN − MLP,test,78.21,77.29,-0.91,"[-1.63, -0.19]",6/20,0.0155,0.0229,5%
+arXiv,Mixup+GCN − GCN,test,80.27,80.2,-0.07,"[-0.56, +0.42]",10/20,0.7646,0.9839,10%
+arXiv,Mixup+GraphConv a4 − GraphConv,test,82.01,81.94,-0.07,"[-0.43, +0.29]",8/20,0.686,0.3537,10%
+arXiv,GCN − MLP,test,80.12,80.27,0.15,"[-0.74, +1.04]",10/20,0.7257,0.6284,10%
+arXiv,Mixup+GCN − GCN,test,81.74,81.77,0.03,"[-0.25, +0.30]",9/20,0.8424,0.7269,20%
+arXiv,Mixup+GraphConv a4 − GraphConv,test,83.26,83.3,0.04,"[-0.40, +0.48]",8/20,0.8349,0.8495,20%
+arXiv,GCN − MLP,test,81.51,81.74,0.23,"[-0.77, +1.23]",10/20,0.6353,0.7227,20%
+arXiv,Mixup+GCN − GCN,test,82.48,82.33,-0.15,"[-0.43, +0.13]",7/20,0.2742,0.4577,30%
+arXiv,Mixup+GraphConv a4 − GraphConv,test,84.48,84.32,-0.16,"[-0.44, +0.12]",6/20,0.2428,0.2833,30%
+arXiv,GCN − MLP,test,82.98,82.48,-0.5,"[-1.25, +0.26]",10/20,0.184,0.2706,30%
+arXiv,Mixup+GCN − GCN,test,82.79,82.66,-0.12,"[-0.48, +0.23]",9/20,0.476,0.4316,60%
+arXiv,Mixup+GraphConv a4 − GraphConv,test,85.45,85.34,-0.12,"[-0.64, +0.41]",9/20,0.6515,0.5729,60%
+arXiv,GCN − MLP,test,83.82,82.79,-1.03,"[-1.80, -0.26]",6/20,0.0111,0.0143,60%

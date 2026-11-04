@@ -1,0 +1,103 @@
+arxiv_id,llm_label,llm_conf,llm_reason,arxiv_label
+1707.08101,Robotics,high,Addresses robotic manipulation and push actions for singulating objects using a PR2 robot.,Robotics
+1908.10084,NLP,high,Focuses on sentence embeddings and semantic textual similarity using modified BERT architectures.,NLP
+2103.17249,Computer vision,high,Deals with text-driven manipulation of StyleGAN generated images using CLIP.,Computer vision
+2309.05273,Info. retrieval,high,Surveys and formalizes multimodal architectures specifically for multimedia recommender systems.,Info. retrieval
+2203.05222,Security,high,Investigates privacy attacks and label inference attacks against split learning frameworks.,Machine learning
+1702.07464,Security,high,Demonstrates privacy leakage attacks via GANs against collaborative and federated deep learning.,Security
+1511.04599,Security,high,"Introduces DeepFool, a method for generating adversarial perturbations to fool neural networks.",Machine learning
+2306.06371,NLP,high,Surveys deep learning methods for natural language text to Java code generation.,NLP
+1506.07503,NLP,high,Proposes attention-based recurrent models specifically adapted for automatic speech recognition.,NLP
+2205.14935,Machine learning,medium,Reviews deep learning methods applied to sensor/radio fingerprint-based indoor localization.,Machine learning
+1911.07246,Robotics,high,It presents a benchmark environment for robot manipulation tasks involving furniture assembly and simulated robot arms.,Robotics
+1906.05274,Machine learning,high,It proposes an exploration objective and reinforcement learning algorithm based on state marginal matching.,Machine learning
+2310.16099,Computer vision,high,The paper focuses on semi-supervised medical image segmentation using anatomically-aware uncertainty estimation.,Computer vision
+2012.15472,Robotics,high,It proposes multi-agent reinforcement learning for physical control and coordination of unmanned aerial vehicle (drone) fleets.,Robotics
+1805.07914,Machine learning,high,It introduces a general imitation learning algorithm to infer latent policies from state observations.,Machine learning
+2002.06353,Computer vision,medium,It proposes a multimodal pre-training model for video and language understanding and generation.,Computer vision
+2010.15036,NLP,high,It is a comprehensive survey on word representation models and language models in natural language processing.,NLP
+1711.05073,NLP,high,It presents a large-scale Chinese machine reading comprehension dataset.,NLP
+2004.04216,NLP,high,It explores natural language generation and data filtering to counter online hate speech using language models.,NLP
+2105.11447,NLP,high,It evaluates true few-shot learning and prompt selection criteria for pretrained language models.,NLP
+2301.11514,Computer vision,high,This survey focuses on deep learning methods for industrial image anomaly detection.,Computer vision
+1712.08125,Robotics,high,"The paper focuses on visual navigation, path planning, and closed-loop control in simulated environments.",Computer vision
+2105.13137,Machine learning,high,It reviews graph neural networks and graph-based deep learning architectures across healthcare applications.,Machine learning
+2208.07017,Machine learning,high,The paper presents a federated machine learning methodology applied to fluid dynamics surrogate modeling.,Machine learning
+2001.07685,Machine learning,high,FixMatch is a general semi-supervised learning algorithm combining consistency regularization and pseudo-labeling.,Machine learning
+1910.08348,Machine learning,high,The paper proposes a meta-learning method for Bayes-adaptive deep reinforcement learning.,Machine learning
+1605.09782,Machine learning,high,It introduces BiGAN for general unsupervised and self-supervised feature representation learning.,Machine learning
+2503.17184,Computer vision,high,The paper focuses on deepfake detection using spatial and frequency domain image artifact analysis.,Computer vision
+1802.09232,Computer vision,high,The tasks are 2D/3D human pose estimation and video action recognition.,Computer vision
+2212.07143,Computer vision,medium,It evaluates scaling laws for contrastive vision-language pre-training (OpenCLIP/CLIP) and visual downstream tasks.,Machine learning
+1911.00359,NLP,high,It presents a pipeline for extracting monolingual text datasets from web crawls for pre-training language models.,NLP
+2401.06774,NLP,high,It studies large language model-based text generation and clinical text mining for electronic health records.,NLP
+1904.00592,Computer vision,high,Focuses on semantic segmentation and deep convolutional architectures for high-resolution aerial imagery.,Computer vision
+1809.06839,Computer vision,high,Introduces an image data augmentation library for computer vision tasks.,Computer vision
+2201.10528,Info. retrieval,high,"Addresses explainability in music recommender systems, a core information retrieval topic.",Machine learning
+2011.13456,Machine learning,high,Proposes a foundational machine learning framework for score-based generative modeling via stochastic differential equations.,Machine learning
+1705.07663,Security,high,Introduces and evaluates membership inference attacks against generative models.,Security
+2606.28358,NLP,high,Analyzes the internal mechanisms of large language models during retrieval-augmented question answering and citation generation.,Info. retrieval
+2111.11343,Machine learning,high,Proposes a general decentralized federated learning optimization and model-sharing algorithm.,Machine learning
+2407.11069,Robotics,medium,"Focuses on control systems, controller design, adaptive control, and dynamical multi-agent systems.",Machine learning
+2002.10957,NLP,high,Compresses pre-trained Transformer language models for NLP benchmarks like GLUE and SQuAD.,NLP
+2101.00440,Computer vision,high,"Proposes a novel pooling operation for convolutional neural networks, evaluated on ImageNet and video action recognition.",Computer vision
+2312.07353,Computer vision,high,Surveys the application and adaptation of CLIP vision-language models for medical imaging tasks.,Computer vision
+2005.02205,Security,high,Investigates privacy risks and membership inference attacks arising from machine unlearning.,Security
+2204.06362,Machine learning,high,Reviews general machine learning methods applied to structural dynamics and engineering problems.,Machine learning
+1509.00685,NLP,high,Proposes an attention-based model for abstractive sentence summarization on text.,NLP
+2204.03883,Computer vision,high,Introduces a vision Transformer architecture specifically designed for single image dehazing.,Computer vision
+1802.06430,Security,high,Proposes adversarial security attacks designed to deceive autonomous vehicle traffic sign recognition systems.,Security
+1801.01944,Security,high,Presents targeted adversarial attacks designed to deceive speech-to-text systems.,Machine learning
+2011.14808,Machine learning,high,"Surveys general deep learning techniques, model compression, and neural architecture search for edge deployment.",Machine learning
+1907.04587,Robotics,medium,"Focuses on simulation methods for contact, multi-body dynamics, and friction applied to robotics and dexterous manipulation.",Robotics
+1703.10593,Computer vision,high,Presents CycleGAN for unpaired image-to-image translation across visual datasets and style transfer tasks.,Computer vision
+2411.16645,Info. retrieval,high,A survey and perspective on recommender systems and their applications for societal good.,Info. retrieval
+2007.15745,Machine learning,high,Surveys general hyperparameter optimization methods and theory for machine learning algorithms.,Machine learning
+2202.11954,Machine learning,high,Provides a visual analytics and explainability tool for automated machine learning (AutoML) pipelines.,Machine learning
+1704.05796,Computer vision,high,Evaluates interpretability of deep visual representations and CNN hidden units aligned with visual concepts.,Computer vision
+1411.5928,Computer vision,high,Generates 2D images of objects from viewpoints using convolutional neural networks and 3D models.,Computer vision
+1802.08232,Security,high,"Addresses privacy risks, data extraction attacks, and unintended memorization of sensitive training data.",Machine learning
+2505.08728,Security,high,"Proposes a framework for risk assessment, attack surface analysis, and security mitigations in RAG pipelines.",Security
+2203.14263,Machine learning,high,Surveys attention mechanisms as a general architectural component across deep learning paradigms.,Machine learning
+1905.09010,Computer vision,high,The paper focuses on fast and lightweight generative network architectures for image inpainting.,Computer vision
+2404.13690,Security,high,The paper presents a method for detecting compromised IoT devices under attack.,Security
+1907.05737,Machine learning,high,The paper proposes a memory-efficient neural architecture search method (PC-DARTS).,Computer vision
+2301.08801,Info. retrieval,high,The paper surveys models and learning approaches for multi-stage information retrieval systems.,Info. retrieval
+2004.08595,Computer vision,high,The paper addresses pixel-wise vision tasks including salient object segmentation and edge detection.,Computer vision
+1912.01703,Machine learning,high,"The paper introduces the design and implementation of PyTorch, a core deep learning framework.",Machine learning
+1607.06520,NLP,high,The paper studies and mitigates gender bias specifically within text word embeddings.,NLP
+2004.07882,Computer vision,high,The paper proposes 3D self-supervised models for medical image segmentation and classification.,Computer vision
+1811.00260,Machine learning,high,"The paper presents Horizon, an end-to-end platform for applied reinforcement learning.",Machine learning
+2307.13463,Computer vision,high,The paper surveys emotion understanding from visual media such as images and videos.,Computer vision
+1105.1186,Robotics,high,Proposes optimal motion planning algorithms (PRM* and RRT*) for robotic path planning.,Robotics
+2006.03669,Machine learning,high,Provides a comprehensive survey of neural network compression techniques such as pruning and quantization.,Machine learning
+2107.00606,Computer vision,high,Focuses on human action recognition using 2D pose representations.,Computer vision
+1511.06349,NLP,high,Presents a variational autoencoder language model to generate sentences and model textual properties.,Machine learning
+2504.20733,Machine learning,high,Introduces a general unsupervised anomaly detection framework evaluated across many diverse benchmarks.,Machine learning
+2108.06152,Computer vision,high,Improves the training convergence of DETR for visual object detection.,Computer vision
+2111.10778,Info. retrieval,high,Develops a federated graph neural network framework for social recommender systems.,Info. retrieval
+2109.01134,Computer vision,high,Proposes prompt learning (CoOp) for vision-language models targeted at downstream image recognition.,Computer vision
+2110.15803,NLP,high,Surveys natural language processing techniques and applications in smart healthcare.,NLP
+1908.03369,Security,high,Proposes an input purification defense mechanism against Trojan and backdoor attacks on DNNs.,Security
+1404.0736,Computer vision,high,Focuses on speeding up convolutional neural networks designed for visual object recognition tasks.,Computer vision
+1511.00561,Computer vision,high,Presents a deep convolutional encoder-decoder neural network for pixel-wise semantic image segmentation.,Computer vision
+1908.07236,Computer vision,high,Addresses temporal moment localization in video based on natural language queries.,Computer vision
+1507.02159,Computer vision,high,Investigates deep two-stream convolutional networks for video action recognition.,Computer vision
+1506.03340,NLP,high,Addresses machine reading comprehension and question answering over natural language documents.,NLP
+1804.02767,Computer vision,high,Introduces updates to the YOLO real-time object detection architecture.,Computer vision
+2004.07780,Machine learning,high,"Analyzes the general deep learning phenomenon of shortcut learning, generalization, and benchmark robustness.",Computer vision
+2007.15859,Machine learning,medium,Applies recurrent neural network sequence modeling to predict cache data accesses and reuse distance.,Machine learning
+1903.09917,Computer vision,high,Designs a convolutional neural network architecture tailored for polarimetric SAR image classification.,Computer vision
+1705.00754,Computer vision,high,Proposes a model and dataset for detecting and captioning events in videos.,Computer vision
+2006.11477,NLP,high,Self-supervised representation learning framework designed specifically for speech audio and speech recognition.,NLP
+1711.09050,NLP,medium,"A survey addressing ethical, bias, and safety challenges in conversational dialogue systems.",NLP
+2007.04954,Computer vision,medium,A 3D simulation platform featuring photo-realistic image rendering and physical interactions for embodied visual understanding.,Computer vision
+2102.08981,Computer vision,high,A large-scale image-text dataset for pre-training models to recognize long-tail visual concepts.,Computer vision
+1812.02900,Machine learning,high,A general off-policy batch reinforcement learning method for continuous control without exploration.,Machine learning
+2005.00333,NLP,high,A multilingual benchmark dataset evaluating causal commonsense reasoning across eleven languages.,NLP
+2004.14973,Computer vision,medium,A visiolinguistic model grounding natural language instructions into sequences of panoramic visual images.,Computer vision
+2005.00388,NLP,high,A benchmark dataset consisting of English tweets for stance detection in text.,NLP
+1602.07360,Computer vision,high,A compact convolutional neural network architecture designed for efficient image classification on ImageNet.,Computer vision
+2205.15744,NLP,high,A method for learning multilingual sentence representations evaluated on cross-lingual language tasks.,NLP
+1912.02783,Computer vision,high,Focuses on self-supervised visual representation learning using video hierarchy and evaluated on visual benchmarks.,Computer vision
+1305.6663,Machine learning,high,Provides general theoretical and algorithmic foundations for regularized and denoising autoencoders as generative models.,Machine learning
